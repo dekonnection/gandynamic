@@ -52,4 +52,5 @@ metadata:
 data:
   DOMAIN: <your_domain>
   SUBDOMAIN: <your_dns_record>
+  TTL: "600" # Gandi rejects TTLs lower than 300
 ```

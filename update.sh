@@ -10,9 +10,9 @@ check_return () {
 
 echo "INFO: starting Gandi dynamic dns updater."
 
-if [[ -z $API_KEY ]] || [[ -z $DOMAIN ]] || [[ -z $SUBDOMAIN ]]
+if [[ -z $API_KEY ]] || [[ -z $DOMAIN ]] || [[ -z $SUBDOMAIN ]] || [[ -z $TTL ]]
 then
-  echo "ERROR: please set \$API_KEY, \$DOMAIN and \$SUBDOMAIN, will exit."
+  echo "ERROR: please set \$API_KEY, \$DOMAIN, \$SUBDOMAIN and \$TTL. Will exit."
   exit 1
 fi
 
@@ -28,7 +28,7 @@ GANDI_UPDATE=$(curl -f -X PUT -H "Content-Type: application/json" \
         -H "X-Api-Key: $API_KEY" \
         -d "{\"rrset_name\": \"$SUBDOMAIN\",
              \"rrset_type\": \"A\",
-             \"rrset_ttl\": 1200,
+             \"rrset_ttl\": \"$TTL\",
              \"rrset_values\": [\"$EXT_IP\"]}" \
         $CURRENT_ZONE_HREF/$SUBDOMAIN/A 2> /dev/null)
 check_return $?
