@@ -30,7 +30,7 @@ GANDI_UPDATE=$(curl -f -X PUT -H "Content-Type: application/json" \
              \"rrset_type\": \"A\",
              \"rrset_ttl\": \"$TTL\",
              \"rrset_values\": [\"$EXT_IP\"]}" \
-        $CURRENT_ZONE_HREF/$SUBDOMAIN/A 2> /dev/null)
+        "$CURRENT_ZONE_HREF/$SUBDOMAIN/A" 2> /dev/null)
 check_return $?
 echo "INFO: gandi update status: ${GANDI_UPDATE}"
 
