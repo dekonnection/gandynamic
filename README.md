@@ -1,8 +1,10 @@
 # gandynamic
 
-A script to push a DNS record pointing to your dynamic IPv4 IP, using Gandi's LiveDNS service.
+A dirty script to push a DNS record pointing to your dynamic IPv4 IP, using Gandi's LiveDNS service.
 
 Usable as a K8s job.
+
+A full rewrite to a proper language is planned.
 
 ## K8s cronjonb example
 
