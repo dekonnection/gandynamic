@@ -4,6 +4,8 @@ A dirty script to push a DNS record pointing to your dynamic IPv4 IP, using Gand
 
 Usable as a K8s job.
 
+This is based on [this script](https://virtuallytd.com/post/dynamic-dns-using-gandi/), with some refinements.
+
 A full rewrite to a proper language is planned.
 
 ## K8s cronjonb example
