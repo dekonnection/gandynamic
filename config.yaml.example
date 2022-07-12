@@ -1,0 +1,8 @@
+public_ip_service: ifconfig.co
+records:
+  - domain: yolops.net
+    subdomain: home
+    ttl: 600
+  - domain: yolops.net
+    subdomain: ssh.git.home
+    ttl: 600
