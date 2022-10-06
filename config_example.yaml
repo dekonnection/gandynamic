@@ -1,0 +1,7 @@
+# public_ip_service: ipinfo.io
+records:
+  - domain: yolops.net
+    subdomain: gandynamictest
+  - domain: yolops.net
+    subdomain: gandynamictest2
+    ttl: 1102
